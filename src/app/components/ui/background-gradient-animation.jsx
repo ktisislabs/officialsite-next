@@ -8,11 +8,11 @@ export const BackgroundGradientAnimation = ({
   firstColor = "100, 100, 100", // Light grey
   secondColor = "150, 150, 150", // Medium grey
   thirdColor = "200, 200, 200", // Lighter grey
-  fourthColor = "220, 220, 220", // Almost white
+  fourthColor = "200, 220, 220", // Almost white
   fifthColor = "255, 255, 255", // White
   pointerColor = "255, 255, 255", // White pointer
-  size = "80%",
-  blendingValue = "normal", // Normal blending for greyscale
+  size = "100%",
+  blendingValue = "normal", 
   children,
   className,
   interactive = true,
@@ -91,15 +91,7 @@ export const BackgroundGradientAnimation = ({
           isSafari ? "blur-2xl" : "[filter:url(#blurMe)_blur(40px)]"
         )}
       >
-        <div
-          className={cn(
-            `absolute [background:radial-gradient(circle_at_center,_rgb(var(--first-color))_0,_rgb(var(--first-color))_50%)_no-repeat]`,
-            `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
-            `[transform-origin:center_center]`,
-            `animate-first`,
-            `opacity-100`
-          )}
-        ></div>
+   
         <div
           className={cn(
             `absolute [background:radial-gradient(circle_at_center,_rgba(var(--second-color),_0.8)_0,_rgba(var(--second-color),_0)_50%)_no-repeat]`,
