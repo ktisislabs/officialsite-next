@@ -8,7 +8,7 @@ function page() {
       <Navbar/>
 
      <div className='Hero-Landing w-screen min-h-screen border'>
-      hello
+      
       
      </div>
 
