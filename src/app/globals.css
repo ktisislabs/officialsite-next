@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,5 +20,32 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  
 }
+
+/* For modern browsers */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height of the scrollbar for horizontal scrolling */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background); /* Track background */
+  border-radius: 4px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--foreground); /* Thumb (scroll handle) background */
+  border-radius: 4px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888; /* Slightly lighter shade on hover for better UX */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; /* Makes the scrollbar thinner */
+  scrollbar-color: var(--foreground) var(--background); /* Thumb and track colors */
+}
+
