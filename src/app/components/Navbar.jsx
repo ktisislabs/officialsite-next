@@ -75,7 +75,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="Navbar w-screen absolute z-30 flex items-center bg-none justify-between bg-transparent ">
+      <nav className="Navbar w-screen fixed z-30 flex items-center bg-none justify-between bg-transparent ">
         <div className="Logo-div px-2">
        <Link href='/Home'>  <Image src={LogoWhite} alt="KtisisLabs-Logo" width={150} height={100} /></Link> 
         </div>
