@@ -4,6 +4,7 @@ import { ServiceHeroData } from '../Data/ServicesHero';
 import Image from 'next/image';
 import { TestimonialsData } from '../Data/Testimonials';
 import Herocta from '../../../public/herocta.jpg'
+import Footer from '../components/Footer';
 
 function Page() {
   return (
@@ -151,10 +152,7 @@ function Page() {
       </section>
 
 
-      <section className="w-screen h-[10vh] bg-white">
-
-        hello
-      </section>
+      <Footer/>
 
 
       </div>

@@ -81,8 +81,8 @@ function Navbar() {
         </div>
 
         <ul className="Navigation-List hidden bg-none  md:flex items-center gap-10 px-5">
-          <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg font-medium">Home</li>
-          <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg font-medium">About</li>
+       <Link href='/Home'>   <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg font-medium">Home</li></Link>
+        <Link href='/About'>  <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg font-medium">About</li></Link>
           <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg font-medium">Services</li>
           <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg font-medium">Works</li>
           <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg font-medium">Get a quote</li>
