@@ -4,7 +4,7 @@ function page() {
   return (
     <>
         <div className=''>
-            about
+          
         </div>
     </>
   )

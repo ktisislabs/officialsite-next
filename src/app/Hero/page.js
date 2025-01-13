@@ -1,3 +1,6 @@
+'use client' ; 
+
+
 import React from 'react';
 import Navbar from '../components/Navbar';
 import { ServiceHeroData } from '../Data/ServicesHero';
@@ -6,7 +9,11 @@ import { TestimonialsData } from '../Data/Testimonials';
 import Herocta from '../../../public/herocta.jpg'
 import Footer from '../components/Footer';
 
+
+
 function Page() {
+
+
   return (
     <>
       <div className="Hero-Section w-screen h-screen overflow-x-hidden overflow-y-auto relative">
@@ -40,6 +47,7 @@ function Page() {
         </div>
 
         {/*Hero-Services*/}
+        
         <section className="w-screen py-20 px-4 bg-black flex flex-col items-center">
           {/* Section Heading */}
           <div className="flex flex-col items-center text-center mb-10">
