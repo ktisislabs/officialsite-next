@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 function page() {
   return (
     <>
-         <div className="About-Section w-screen h-screen overflow-x-hidden overflow-y-auto relative">
+         <div className="About-Section w-screen h-screen overflow-x-hidden overflow-y-auto relative bg-black">
          <Navbar/>
          <div className="About-Section w-full h-full absolute flex flex-col items-center justify-center px-8 md:px-16 lg:px-24 text-center space-y-8 bg-black bg-opacity-50">
  

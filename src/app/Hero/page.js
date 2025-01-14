@@ -54,8 +54,8 @@ function Page() {
             <p className="text-black bg-white p-2 rounded-xl font-medium font-sans">
               Our Services
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold my-2">How can we help you?</h2>
-            <p className='my-5 text-xl text-center font-regular'>Transparency, reliability, and outstanding customer experiences are at the core of our values.<br></br> We take pride in fostering strong relationships with our clients, communicating openly at every stage of the development process.</p>
+            <h2 className="text-3xl text-white sm:text-4xl font-bold my-2">How can we help you?</h2>
+            <p className='my-5 text-xl text-center font-regular text-white'>Transparency, reliability, and outstanding customer experiences are at the core of our values.<br></br> We take pride in fostering strong relationships with our clients, communicating openly at every stage of the development process.</p>
           </div>
 
           {/* Services Grid */}

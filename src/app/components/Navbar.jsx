@@ -81,11 +81,11 @@ function Navbar() {
         </div>
 
         <ul className="Navigation-List hidden bg-none  md:flex items-center gap-10 px-5">
-       <Link href='/Home'>   <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg font-medium">Home</li></Link>
-        <Link href='/About'>  <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg font-medium">About</li></Link>
-          <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg font-medium">Services</li>
-          <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg font-medium">Works</li>
-          <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg font-medium">Get a quote</li>
+       <Link href='/Home'>   <li className=" hover:text-gray-500 text-white cursor-pointer font-sans text-lg font-medium">Home</li></Link>
+        <Link href='/About'>  <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg text-white font-medium">About</li></Link>
+        <Link href='/OurServices'>  <li className=" hover:text-gray-500 cursor-pointer font-sans text-white text-lg font-medium">Services</li></Link>
+          <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg font-medium text-white">Works</li>
+        <Link href='/Quotation'>  <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg text-white font-medium">Get a quote</li></Link>
         </ul>
 
         <div className="Hamburger md:hidden px-3 text-xl cursor-pointer" onClick={toggleMenu}>
