@@ -24,7 +24,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #888; /* Slightly lighter shade on hover for better UX */
+  background: #ffffff; /* Slightly lighter shade on hover for better UX */
 }
 
 /* For Firefox */

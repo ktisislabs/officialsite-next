@@ -3,14 +3,15 @@ import Navbar from '../components/Navbar'
 import Link from 'next/link'
 import Footer from '../components/Footer'
 
+
 function page() {
   const CustomLinks=[
-    "/Services/CustomSoftwareSolutions",
-    "/Services/MobileApplicationDevelopment",
-    "/Services/WebApplicationDevelopment",
-    "/Services/WebandUI/UXDesign",
-    "/Services/QualityAssurance",
-    "/Services/DeploymentandMaintence"
+   "OurServices/CustomSoftwareDevelopment" ,
+    "/OurServices/MobileApp",
+    "/OurServices/WebApplicationDevelopment",
+    "/OurServices/WebandUI",
+    "/OurServices/QualityAssurance",
+    "/OurServices/DeploymentandMaintenance"
   ]
   return (
     <>
@@ -41,7 +42,7 @@ function page() {
                   'Web Application Development',
                   'Web and UI / UX Design',
                   'Quality Assurance and Software Testing',
-                  'Deployment and Maintence',
+                  'Deployment and Maintenance',
                 ].map((service, index) => (
                   <li
                     key={index}
