@@ -75,7 +75,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="Navbar w-screen fixed z-30 flex items-center bg-none justify-between bg-transparent ">
+      <nav className="Navbar w-screen absolute z-30 flex items-center bg-none justify-between bg-transparent ">
         <div className="Logo-div px-2">
        <Link href='/Home'>  <Image src={LogoWhite} alt="KtisisLabs-Logo" width={150} height={100} /></Link> 
         </div>
@@ -84,7 +84,7 @@ function Navbar() {
        <Link href='/Home'>   <li className=" hover:text-gray-500 text-white cursor-pointer font-sans text-lg font-medium">Home</li></Link>
         <Link href='/About'>  <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg text-white font-medium">About</li></Link>
         <Link href='/OurServices'>  <li className=" hover:text-gray-500 cursor-pointer font-sans text-white text-lg font-medium">Services</li></Link>
-          <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg font-medium text-white">Works</li>
+         <Link href='/Work'> <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg font-medium text-white">Works</li></Link>
         <Link href='/Quotation'>  <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg text-white font-medium">Get a quote</li></Link>
         </ul>
 
