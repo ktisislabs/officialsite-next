@@ -7,31 +7,7 @@ body {
   
 }
 
-/* For modern browsers */
-::-webkit-scrollbar {
-  width: 8px; /* Width of the scrollbar */
-  height: 8px; /* Height of the scrollbar for horizontal scrolling */
-}
 
-::-webkit-scrollbar-track {
-  background: var(--background); /* Track background */
-  border-radius: 4px; /* Rounded corners */
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--foreground); /* Thumb (scroll handle) background */
-  border-radius: 4px; /* Rounded corners */
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #ffffff; /* Slightly lighter shade on hover for better UX */
-}
-
-/* For Firefox */
-* {
-  scrollbar-width: thin; /* Makes the scrollbar thinner */
-  scrollbar-color: var(--foreground) var(--background); /* Thumb and track colors */
-}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -100,5 +76,32 @@ body {
   
   }
   
+}
+
+/* Custom Space Neon Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000; /* Pure black background */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ff3300, #990000); /* Red neon gradient */
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ff3300, 0 0 20px #990000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ff2200, #cc0000);
+  box-shadow: 0 0 15px #ff2200, 0 0 25px #cc0000;
+}
+
+/* Firefox Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ff3300 #000000;
 }
 

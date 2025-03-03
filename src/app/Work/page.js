@@ -10,8 +10,8 @@ function Page() {
       <div className="work-page w-screen min-h-screen bg-black text-white overflow-y-auto overflow-x-hidden">
         <Navbar />
         <div className="work-area w-full min-h-screen flex flex-col items-center justify-center px-4 md:px-8">
-          <p className="w-full text-center text-2xl md:text-2xl font-bold mb-6">Works</p>
-          <div className="cards max-w-[50vw] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-6">
+          <p className="w-full text-center text-2xl md:text-2xl font-bold mb-6">Our portfolio is currently being updated. Stay tuned for exciting new projects!</p>
+          {/* <div className="cards max-w-[50vw] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-6">
             {WorkData.map((work, index) => (
               <div
                 key={index}
@@ -26,7 +26,7 @@ function Page() {
                 <p className="text-sm text-gray-400 mt-2">{work.Description}</p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
         <Footer />
       </div>
