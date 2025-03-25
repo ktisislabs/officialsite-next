@@ -23,10 +23,12 @@ function Footer() {
         {/* Social Media Section */}
         <div className='flex items-center gap-4'>
           <p className='text-sm font-bold'>Follow Us </p>
-          <IoLogoWhatsapp className='text-white hover:text-gray-400 cursor-pointer' size={20} />
-          <RiInstagramFill className='text-white hover:text-gray-400 cursor-pointer' size={20} />
-          <FaLinkedinIn className='text-white hover:text-gray-400 cursor-pointer' size={20} />
-          <FaTwitter className='text-white hover:text-gray-400 cursor-pointer' size={20} />
+          <a href="https://wa.me/919289183829" target="_blank" rel="noopener noreferrer">
+  <IoLogoWhatsapp className="text-white hover:text-gray-400 cursor-pointer" size={20} />
+</a>
+        <a href="https://www.instagram.com/ktisislabs/" target='_blank'> <RiInstagramFill className='text-white hover:text-gray-400 cursor-pointer' size={20} /></a> 
+        <a href="https://www.linkedin.com/company/ktisis-labs" target='_blank'>   <FaLinkedinIn className='text-white hover:text-gray-400 cursor-pointer' size={20} /></a>
+        <a href="https://x.com/KtisisL24135" target='_blank'>  <FaTwitter className='text-white hover:text-gray-400 cursor-pointer' size={20} /></a>
         </div>
       </section>
     </>

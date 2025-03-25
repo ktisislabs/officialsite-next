@@ -5,9 +5,13 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import { ServiceHeroData } from '../Data/ServicesHero';
 import Image from 'next/image';
-import { TestimonialsData } from '../Data/Testimonials';
+// import { TestimonialsData } from '../Data/Testimonials';
 import Herocta from '../../../public/herocta.jpg'
 import Footer from '../components/Footer';
+import Link from 'next/link';
+
+
+
 
 
 
@@ -28,6 +32,7 @@ function Page() {
             autoPlay
             loop
             muted
+            playsInline
             className="absolute top-0 left-0 w-full h-full object-cover"
             aria-label="Background Video"
           ></video>
@@ -83,6 +88,7 @@ function Page() {
     autoPlay
     loop
     muted
+    playsInline
     className="absolute top-0 left-0 w-full h-full object-cover"
     aria-label="Background Video"
   ></video>
@@ -93,13 +99,15 @@ function Page() {
   </div>
 
   {/* Button */}
+  <a href="tel:+919289183829">
   <button className="relative z-10 px-8 py-4 rounded-lg bg-white  text-black text-lg font-semibold hover:bg-gray-200">
     Call Now - (+91) 9289183829
   </button>
+  </a>
 </section>
 
 
-
+{/* 
 <section className="w-screen py-10 bg-black flex flex-col items-center">
 <p className="text-black bg-white p-2 rounded-xl font-medium font-sans">
               Testimonials
@@ -131,7 +139,7 @@ function Page() {
           </div>
         ))}
       </div>
-    </section>
+    </section> */}
 
     <section className="w-screen h-screen relative flex flex-col items-center justify-center text-center px-4 overflow-hidden">
         {/* Background Image */}
@@ -154,9 +162,9 @@ function Page() {
         </p>
 
         {/* Button */}
-      <button className="bg-white text-black font-medium rounded-full px-6 py-3 shadow-md hover:bg-gray-200 transition duration-300">
+    <Link href='/Quotation'> <button className="bg-white text-black font-medium rounded-full px-6 py-3 shadow-md hover:bg-gray-200 transition duration-300">
           Get in Touch <span className="ml-2">•</span>
-        </button> 
+        </button> </Link> 
       </section>
 
 

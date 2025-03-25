@@ -78,7 +78,7 @@ body {
   
 }
 
-/* Custom Space Neon Scrollbar */
+/* Custom White Neon Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -89,19 +89,18 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #ff3300, #990000); /* Red neon gradient */
+  background: linear-gradient(45deg, #ffffff, #cccccc); /* White neon gradient */
   border-radius: 10px;
-  box-shadow: 0 0 10px #ff3300, 0 0 20px #990000;
+  box-shadow: 0 0 10px #ffffff, 0 0 20px #cccccc;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #ff2200, #cc0000);
-  box-shadow: 0 0 15px #ff2200, 0 0 25px #cc0000;
+  background: linear-gradient(45deg, #f0f0f0, #bbbbbb);
+  box-shadow: 0 0 15px #f0f0f0, 0 0 25px #bbbbbb;
 }
 
 /* Firefox Scrollbar */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #ff3300 #000000;
+  scrollbar-color: #ffffff #000000;
 }
-
