@@ -117,13 +117,13 @@ function QualityA() {
           />
 
           {/* Heading */}
-          <h1 className="font-poppins font-extrabold text-black text-4xl md:text-5xl lg:text-6xl leading-tight mb-4">
+          <h1 className="font-poppins font-extrabold text-white text-4xl md:text-5xl lg:text-6xl leading-tight mb-4">
             Let’s ensure quality
-            <span className="font-extrabold text-black"> together</span>
+            <span className="font-extrabold text-white"> together</span>
           </h1>
 
           {/* Subtext */}
-          <p className="font-poppins text-gray-900 text-sm md:text-base lg:text-lg max-w-xl mx-auto mb-8">
+          <p className="font-poppins text-gray-200 text-sm md:text-base lg:text-lg max-w-xl mx-auto mb-8">
             Partner with us to deliver software that exceeds expectations and stands out in the market.
           </p>
 

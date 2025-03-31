@@ -5,6 +5,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
+import Link from 'next/link';
 
 function Footer() {
   return (
@@ -12,7 +13,7 @@ function Footer() {
       <section className='w-screen bg-black text-white  flex-wrap items-center justify-evenly hidden sm:flex'>
         {/* Logo Section */}
         <div className='mb-6 sm:mb-0'>
-          <Image src={WhiteLogo} alt='Ktisis-Logo' width={100} height={100} />
+         <Link href="/Home"><Image src={WhiteLogo} alt='Ktisis-Logo' width={100} height={100} /></Link> 
         </div>
 
         {/* Newsletter Section */}

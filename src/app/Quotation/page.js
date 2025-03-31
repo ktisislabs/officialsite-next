@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 import { useForm } from "@formspree/react";
-import toast from "react-hot-toast";
+import toast,{Toaster} from "react-hot-toast";
 
 import {
     Accordion,
@@ -17,12 +17,14 @@ import {
 export default function Contact() {
   const [activeFAQ, setActiveFAQ] = useState(null);
   const [state, handleSubmit] = useForm("xovvjgvy");
-
+  const [newsLetter,handleSubmitNews] = useState("xwplnybj")
   // Toggle active FAQ
   const toggleFAQ = (index) => {
     setActiveFAQ(activeFAQ === index ? null : index);
   };
 
+  
+    
   useEffect(() => {
     if (state.succeeded) {
       toast.success("Thank you for reaching out to us!", {
@@ -31,13 +33,15 @@ export default function Contact() {
       });
     }
   }, [state.succeeded]);
+ 
 
   return (
     <>
+        <Toaster/>
       <div className="relative w-full min-h-screen bg-black overflow-x-hidden overflow-y-auto">
         {/* Navbar component */}
         <Navbar />
-
+    
         {/* Contact Section */}
         <div className="Contact-Section flex flex-col justify-center items-center text-center w-full mt-12 h-auto px-4 py-8 sm:py-16">
           <p className="text-white font-poppins text-2xl sm:text-4xl font-medium mb-8 sm:mb-16">
@@ -66,7 +70,7 @@ export default function Contact() {
               <div className="mb-4">
                 <label
                   htmlFor="name"
-                  className="block text-gray-700 font-medium mb-2"
+                  className="block text-gray-900 font-medium mb-2"
                 >
                   Name
                 </label>
@@ -75,7 +79,7 @@ export default function Contact() {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-2 border border-gray-600 rounded-md bg-white text-gray-300 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full px-4 py-2 border border-gray-600 rounded-md bg-white text-gray-900 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-purple-500"
                   placeholder="Your Name"
                 />
               </div>
@@ -91,7 +95,7 @@ export default function Contact() {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-2 border border-gray-600 rounded-md bg-white text-gray-300 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full px-4 py-2 border border-gray-600 rounded-md bg-white text-gray-900 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-purple-500"
                   placeholder="Your Email"
                 />
               </div>
@@ -107,7 +111,7 @@ export default function Contact() {
                   id="mobilenumber"
                   name="mobilenumber"
                   required
-                  className="w-full px-4 py-2 border border-gray-600 rounded-md bg-white text-gray-300 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full px-4 py-2 border border-gray-600 rounded-md bg-white text-gray-900 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-purple-500"
                   placeholder="Your Mobile Number"
                 />
               </div>
@@ -123,7 +127,7 @@ export default function Contact() {
                   name="project"
                   required
                   rows="4"
-                  className="w-full px-4 py-2 border border-gray-600 rounded-md bg-white text-gray-300 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full px-4 py-2 border border-gray-600 rounded-md bg-white text-gray-900 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-purple-500"
                   placeholder="Your Project Details"
                 />
               </div>
@@ -193,21 +197,11 @@ export default function Contact() {
   {/* Content */}
   <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 sm:px-6 space-y-4 sm:space-y-2">
     <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white drop-shadow-lg">
-      Subscribe to Our Newsletter
+    The Future is Being Built. Are You In?
     </h2>
     <p className="text-sm sm:text-base md:text-lg text-white drop-shadow-md max-w-xl">
-      Stay updated with the latest news, articles, and exclusive insights delivered directly to your inbox.
+    Ideas shape the world. Yours could be next. Let’s create something legendary together.
     </p>
-    <div className="w-full sm:w-3/4 md:w-1/2 flex flex-col sm:flex-row items-center gap-4">
-      <input
-        type="email"
-        placeholder="Enter your email"
-        className="w-full px-4 py-2 sm:py-3 text-sm sm:text-base text-black rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-500"
-      />
-      <button className="w-full sm:w-auto px-4 py-2 sm:py-3 text-white border hover:text-black bg-black hover:bg-white transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 ring-offset-2 rounded-md  drop-shadow-2xl">
-        Submit
-      </button>
-    </div>
   </div>
 </section>
 

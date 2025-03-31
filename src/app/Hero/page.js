@@ -71,7 +71,7 @@ function Page() {
                 className="bg-white border shadow-lg rounded-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="w-16 h-16 mb-4">
-                  {service.Icon && <service.Icon size={35} className='text-black'/>}
+                  {service.Icon && <service.Icon size={35} className='text-black text-center'/>}
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-black">{service.Service_name}</h3>
                 <p className="text-gray-700">{service.Service}</p>

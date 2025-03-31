@@ -10,6 +10,7 @@ function page() {
     "/OurServices/MobileApp",
     "/OurServices/WebApplicationDevelopment",
     "/OurServices/WebandUI",
+    "/OurServices/AIandMLDevelopment",
     "/OurServices/QualityAssurance",
     "/OurServices/DeploymentandMaintenance"
   ]
@@ -41,6 +42,7 @@ function page() {
                   'Mobile Application Development',
                   'Web Application Development',
                   'Web and UI / UX Design',
+                  'AI/ML Development',
                   'Quality Assurance and Software Testing',
                   'Deployment and Maintenance',
                 ].map((service, index) => (

@@ -1,6 +1,6 @@
 'use client'; 
 
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Image from 'next/image';
 import LogoWhite from '../../../public/Logo-white.png'; 
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -12,8 +12,23 @@ import { RiInstagramFill } from "react-icons/ri";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 
+
 function Navbar() {
   const [menu, setMenu] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMenu = () => {
     setMenu(!menu); // Toggle menu based on the current state
@@ -42,23 +57,24 @@ function Navbar() {
             <Link href="/About">About</Link>
           </li>
           <li className="font-sans text-lg font-medium p-5 md:p-0 hover:text-gray-500 cursor-pointer">
-            <Link href="/Services">Services</Link>
+            <Link href="/OurServices">Services</Link>
           </li>
-          <li className="font-sans text-lg font-medium p-5 md:p-0 hover:text-gray-500 cursor-pointer">
+          {/* <li className="font-sans text-lg font-medium p-5 md:p-0 hover:text-gray-500 cursor-pointer">
             <Link href="/Works">Works</Link>
-          </li>
+          </li> */}
           <li className="font-sans text-lg font-medium p-5 md:p-0 hover:text-gray-500 cursor-pointer">
-            <Link href="/Quote">Get a Quote</Link>
+            <Link href="/Quotation">Get a Quote</Link>
           </li>
           <li className="font-sans text-lg font-medium p-5 md:p-0  cursor-pointer flex items-center gap-5">
             
-            <IoLogoWhatsapp className='hover:text-gray-500 cursor-pointer'/>
-            <RiInstagramFill className='hover:text-gray-500 cursor-pointer'/>
-            <FaLinkedinIn className='hover:text-gray-500 cursor-pointer'/>
-            <FaTwitter className='hover:text-gray-500 cursor-pointer'/>
-            
+            <a href="https://wa.me/919289183829" target="_blank" rel="noopener noreferrer">
+              <IoLogoWhatsapp className="text-black hover:text-gray-400 cursor-pointer" size={20} />
+            </a>
+                    <a href="https://www.instagram.com/ktisislabs/" target='_blank'> <RiInstagramFill className='text-black hover:text-gray-400 cursor-pointer' size={20} /></a> 
+                    <a href="https://www.linkedin.com/company/ktisis-labs" target='_blank'>   <FaLinkedinIn className='text-black hover:text-gray-400 cursor-pointer' size={20} /></a>
+                    <a href="https://x.com/KtisisL24135" target='_blank'>  <FaTwitter className='text-black hover:text-gray-400 cursor-pointer' size={20} /></a>
           </li>
-          <li className="absolute bottom-5 left-1/2 transform -translate-x-1/2">
+        <Link href="/Home"><li className="absolute bottom-5 left-1/2 transform -translate-x-1/2">
             <Image
               src={BlackLogo}
               alt="ktisi-logo"
@@ -66,7 +82,7 @@ function Navbar() {
               height={250}
               className="mr-24"
             />
-          </li>
+          </li></Link>  
         </ul>
       );
     }
@@ -75,7 +91,8 @@ function Navbar() {
 
   return (
     <>
-      <nav className="Navbar w-screen absolute z-30 flex items-center bg-none justify-between bg-transparent ">
+     <nav className={`Navbar w-screen absolute z-30 flex items-center justify-between transition-all duration-300 ${scrolling ? 'bg-gray-900 bg-opacity-80' : 'bg-transparent'}`}>
+
         <div className="Logo-div px-2">
        <Link href='/Home'>  <Image src={LogoWhite} alt="KtisisLabs-Logo" width={150} height={100} /></Link> 
         </div>
@@ -84,12 +101,12 @@ function Navbar() {
        <Link href='/Home'>   <li className=" hover:text-gray-500 text-white cursor-pointer font-sans text-lg font-medium">Home</li></Link>
         <Link href='/About'>  <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg text-white font-medium">About</li></Link>
         <Link href='/OurServices'>  <li className=" hover:text-gray-500 cursor-pointer font-sans text-white text-lg font-medium">Services</li></Link>
-         <Link href='/Work'> <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg font-medium text-white">Works</li></Link>
+         {/* <Link href='/Work'> <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg font-medium text-white">Works</li></Link> */}
         <Link href='/Quotation'>  <li className=" hover:text-gray-500 cursor-pointer font-sans text-lg text-white font-medium">Get a quote</li></Link>
         </ul>
 
         <div className="Hamburger md:hidden px-3 text-xl cursor-pointer" onClick={toggleMenu}>
-          <GiHamburgerMenu />
+          <GiHamburgerMenu className='text-white'/>
         </div>
 
         {renderMenu()}
