@@ -6,7 +6,6 @@ import LogoWhite from '../../../public/Logo-white.png';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io"; // Missing import for the close icon
 import Link from 'next/link'; // Add missing import for Link
-import BlackLogo from '../../../public/Logo2.png'
 import { IoLogoWhatsapp } from "react-icons/io";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -76,7 +75,7 @@ function Navbar() {
           </li>
         <Link href="/Home"><li className="absolute bottom-5 left-1/2 transform -translate-x-1/2">
             <Image
-              src={BlackLogo}
+              src="/Logo2.png"
               alt="ktisi-logo"
               width={350}
               height={250}
