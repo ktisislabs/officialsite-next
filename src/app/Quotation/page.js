@@ -33,7 +33,14 @@ export default function Contact() {
       });
     }
   }, [state.succeeded]);
- 
+  useEffect(() => {
+    document.title = "Get a Quote | Ktisis Labs";
+
+    const descriptionMetaTag = document.querySelector('meta[name="description"]');
+    if (descriptionMetaTag) {
+      descriptionMetaTag.setAttribute("content", "Request a personalized quote for Ktisis Labs' innovative tech solutions and digital services.");
+    }
+  }, []);
 
   return (
     <>

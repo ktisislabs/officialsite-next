@@ -4,6 +4,11 @@ import Link from 'next/link'
 import Footer from '../components/Footer'
 
 
+export const metadata = {
+  title: "Services | Ktisis Labs",
+  description: "Discover the range of cutting-edge tech services offered by Ktisis Labs to empower your business growth.",
+};
+
 function page() {
   const CustomLinks=[
    "OurServices/CustomSoftwareDevelopment" ,
@@ -14,6 +19,7 @@ function page() {
     "/OurServices/QualityAssurance",
     "/OurServices/DeploymentandMaintenance"
   ]
+
   return (
     <>
      

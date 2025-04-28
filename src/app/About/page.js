@@ -2,8 +2,17 @@ import React from 'react'
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
+
+
+export const metadata = {
+  title: "About Us | Ktisis Labs",
+  description: "Learn more about Ktisis Labs and our mission to drive innovation and empowerment.",
+};
+
 function page() {
+ 
   return (
+    
     <>
          <div className="About-Section w-screen h-screen overflow-x-hidden overflow-y-auto relative bg-black">
          <Navbar/>

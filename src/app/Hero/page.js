@@ -9,6 +9,7 @@ import Image from 'next/image';
 import Herocta from '../../../public/herocta.jpg'
 import Footer from '../components/Footer';
 import Link from 'next/link';
+import { useEffect } from 'react';
 
 
 
@@ -17,7 +18,19 @@ import Link from 'next/link';
 
 function Page() {
 
+  useEffect(() => {
+  
+    document.title = "Home | Ktisis Labs";
 
+    
+    const descriptionMetaTag = document.querySelector('meta[name="description"]');
+    if (descriptionMetaTag) {
+      descriptionMetaTag.setAttribute(
+        "content",
+        "Welcome to Ktisis Labs — Empowering businesses through innovative technology and digital solutions."
+      );
+    }
+  }, []);
   return (
     <>
       <div className="Hero-Section w-screen h-screen overflow-x-hidden overflow-y-auto relative">
